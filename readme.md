@@ -1,7 +1,7 @@
 # Currency conversion
 
 ## Assumptions
-Hopefully I did not get the question wrong, but I assume that we are building a currency exchange which shows the exchange rates of various currencies with USD
+I assume that we are building a currency exchange which shows the exchange rates of various currencies with USD
 
 ## How to use this project
 1. Generate a Django secret. Sample code to run on cmd line:
