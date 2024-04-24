@@ -1,0 +1,14 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        - DJANGO_DEBUG=${DJANGO_DEBUG}
+        - DJANGO_SECRET=${DJANGO_SECRET}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+
+volumes:
+  data:
