@@ -62,6 +62,11 @@ docker compose run web python manage.py createsuperuser
 
 Click on `currency_rates` and under each currency, there is a `history` button at the top right hand corner. This is supported by `django-simple-history` where a historical record of changes to each currency will be kept
 
+## Naming conventions
+1. Models: Capitalized characters delimited by "_"
+2. Classes: Delimited by capital letters
+3. Functions and variables: Lower characters delimited by "_"
+
 ## Improvements
 1. Authentication and permissions, especially for the `sync_currency` endpoint which should only be accessible to the admins
 2. There should be more error handling for the yfinance package.
