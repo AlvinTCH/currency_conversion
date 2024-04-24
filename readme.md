@@ -53,6 +53,15 @@ POST /sync_currency/
 ```
 This will get all the exchange rates from the yfinance package and create/update the sqlite database. This endpoint is done as I imagine that we can use a cron service to call this endpoint periodically to update the sqlite database.
 
+## Admin panel and currency history
+1. On your local machine, run the following code to create a super user
+```
+docker compose run web python manage.py createsuperuser
+```
+2. Access `localhost:8000/admin` and log in with the super user account
+
+Click on `currency_rates` and under each currency, there is a `history` button at the top right hand corner. This is supported by `django-simple-history` where a historical record of changes to each currency will be kept
+
 ## Improvements
 1. Authentication and permissions, especially for the `sync_currency` endpoint which should only be accessible to the admins
 2. There should be more error handling for the yfinance package.
